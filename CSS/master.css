@@ -1,0 +1,115 @@
+:root{
+  --main-bg-color: #0d1117;
+  --second-bg-color: #222121c2;
+  --main-color: #fff;
+  --hint-color: #ddd;
+  --second-color: linear-gradient(90deg, rgb(40, 145, 230), #8b57ec);
+  --btn-color: #2190ff;
+  --radius: 6px;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: "Cairo", sans-serif;
+}
+/* Global Style  */
+:where(input, button){
+  outline: none;
+  border: none;
+}
+/* Animation  */
+.winner{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.winner.hidden {
+  display: none;
+}
+/* Start The App  */
+.app{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+  background-color: var(--main-bg-color);
+}
+.app .header{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.app .header .title{
+  font-size: 45px;
+  font-weight: bold;
+  background-image: var(--second-color);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.app .card{
+  min-width: 500px;
+  max-width: 550px;
+  height: 380px;
+  padding: 30px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--second-bg-color);
+}
+.app .card .card-content{
+  text-align: center;
+}
+.app .card .card-content .typing{
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+.app .card .card-content .card-inputs{
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+.app .card .card-content .card-inputs input{
+  width: 45px;
+  height: 50px;
+  font-size: 20px;
+  color: aqua;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  background-color: rgb(136, 137, 137);
+}
+.app .card .card-content .card-info{
+  margin: 20px 0;
+  text-align: center;
+}
+.app .card .card-content .card-info p{
+  color: var(--hint-color);
+  font-size: 12px;
+  text-align: center;
+}
+.app .card .card-content .card-info p > .counter{
+  color: var(--btn-color);
+}
+.app .card .card-content .btn{
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  width: 200px;
+  padding: 10px 0;
+  color: var(--main-color);
+  cursor: pointer;
+  border-radius: var(--radius);
+  background-color: var(--btn-color);
+}
